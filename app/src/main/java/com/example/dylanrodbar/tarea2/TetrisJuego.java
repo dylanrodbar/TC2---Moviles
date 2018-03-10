@@ -1,5 +1,7 @@
 package com.example.dylanrodbar.tarea2;
 
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,11 +11,13 @@ import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class TetrisJuego extends AppCompatActivity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
     private GestureDetectorCompat gestureDetector;
+    MediaPlayer mp;
     TableLayout tableLa;
     private final int largoMatriz = 22;
     private final int anchoMatriz = 10;
@@ -76,8 +80,23 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
         };
 
 
+        mp = new MediaPlayer();
+        AssetFileDescriptor afd = getResources().openRawResourceFd(R.raw.digimon);
+        try {
+            mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            afd.close();
+            mp.prepare();
+            mp.setLooping(true);
+            mp.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Thread t = new Thread(r, "T1");
         t.start();
+
+
+        //mp.start();
 
     }
 
@@ -471,6 +490,26 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
         }
     }
 
+    public void clickBotonDerecha() {
+        if(!estaEnLimiteDerecha()) {
+            moverPiezaDerecha();
+        }
+        dibujarMatrizLogica();
+        dibujarPieza();
+
+    }
+
+
+
+    public void clickBotonIzquierda() {
+        if(!estaEnLimiteIzquierda()) {
+            moverPiezaIzquierda();
+        }
+        dibujarMatrizLogica();
+        dibujarPieza();
+
+    }
+
 
     /*Manejo de gestos*/
 
@@ -541,31 +580,13 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
 
         //Scroll right
         if (angle > -45 && angle <= 45) {
-            if(!estaEnLimiteDerecha()) {
-                moverPiezaDerecha();
-            }
-            dibujarMatrizLogica();
-            dibujarPieza();
-            try {
-                Thread.sleep(80);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
 
         }
 
         //Scroll left
         if (angle >= 135 && angle < 180 || angle < -135 && angle > -180) {
-            if(!estaEnLimiteIzquierda()) {
-                moverPiezaIzquierda();
-            }
-            dibujarMatrizLogica();
-            dibujarPieza();
-            try {
-                Thread.sleep(80);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
 
         }
 
