@@ -4,4 +4,5 @@
     <string name="button_menu2">Ver puntajes</string>
     <string name="message_tetris1">Puntaje</string>
     <string name="message_tetris2">Siguiente Pieza</string>
+    <string name="message_tetrispuntaje">Su puntaje obtenido en esta partida es:</string>
 </resources>

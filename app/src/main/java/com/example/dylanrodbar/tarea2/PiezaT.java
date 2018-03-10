@@ -29,7 +29,7 @@ public class PiezaT extends Pieza {
         tipoPiezas[2].annadirPosiciones(1, 5, 0);
         tipoPiezas[2].annadirPosiciones(1, 4, 1);
         tipoPiezas[2].annadirPosiciones(1, 3, 2);
-        tipoPiezas[2].annadirPosiciones(0, 3, 3);
+        tipoPiezas[2].annadirPosiciones(0, 4, 3);
 
         tipoPiezas[3].annadirPosiciones(2, 4, 0);
         tipoPiezas[3].annadirPosiciones(1, 4, 1);

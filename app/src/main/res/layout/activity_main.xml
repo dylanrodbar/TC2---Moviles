@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context="com.example.dylanrodbar.tarea2.MainActivity">
 
     <RelativeLayout
@@ -26,9 +27,9 @@
             android:id="@+id/buttonMenu1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_above="@+id/buttonMenu2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="103dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/button_shape"
             android:onClick="buttonMenu1Clicked"
             android:text="@string/button_menu1" />
@@ -37,9 +38,9 @@
             android:id="@+id/buttonMenu2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/buttonMenu1"
-            android:layout_alignTop="@+id/buttonMenu1"
-            android:layout_marginTop="159dp"
+            android:layout_marginBottom="135dp"
             android:background="@drawable/button_shape"
             android:onClick="buttonMenu2Clicked"
             android:text="@string/button_menu2" />

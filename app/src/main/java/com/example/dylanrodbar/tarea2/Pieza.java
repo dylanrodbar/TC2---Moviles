@@ -169,4 +169,25 @@ public abstract class Pieza {
 
     public abstract void asignarValoresBloques();
 
+    public void setBloque1(Bloque bloque1) {
+        this.bloque1 = bloque1;
+    }
+    public void setBloque2(Bloque bloque2) {
+        this.bloque2 = bloque2;
+    }
+    public void setBloque3(Bloque bloque3) {
+        this.bloque3 = bloque3;
+    }
+    public void setBloque4(Bloque bloque4) {
+        this.bloque4 = bloque4;
+    }
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+    public void setTipoPieza(int tipoPieza) {
+        this.tipoPieza = tipoPieza;
+    }
+
+
+
 }
