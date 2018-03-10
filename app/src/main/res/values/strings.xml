@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tetris</string>
+    <string name="button_menu1">Empezar juego</string>
+    <string name="button_menu2">Ver puntajes</string>
+    <string name="message_tetris1">Puntaje</string>
+    <string name="message_tetris2">Siguiente Pieza</string>
+</resources>
