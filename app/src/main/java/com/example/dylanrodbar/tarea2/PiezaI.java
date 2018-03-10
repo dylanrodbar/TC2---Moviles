@@ -13,10 +13,10 @@ public class PiezaI extends Pieza {
     }
     PiezaI(){
         super();
-        bloque1 = new Bloque("Amarillo");
-        bloque2 = new Bloque("Amarillo");
-        bloque3 = new Bloque("Amarillo");
-        bloque4 = new Bloque("Amarillo");
+        bloque1 = new Bloque(1);
+        bloque2 = new Bloque(1);
+        bloque3 = new Bloque(1);
+        bloque4 = new Bloque(1);
         tipoPieza = 1;
     }
     @Override

@@ -7,19 +7,19 @@ package com.example.dylanrodbar.tarea2;
 public class Bloque {
     private int x;
     private int y;
-    private String color;
-    private String colorHex;
+    private int tipo;
 
     public Bloque() {}
 
-    public Bloque(String color) {
-        this.color = color;
+    public Bloque(int tipo) {
+
+        this.tipo = tipo;
     }
 
-    public Bloque(int x, int y, String color) {
+    public Bloque(int x, int y) {
         this.x = x;
         this.y = y;
-        this.color = color;
+
     }
 
     public void actualizarPosicion(int x, int y){
@@ -35,13 +35,6 @@ public class Bloque {
         this.y = y;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setColorHex(String colorHex) {
-        this.colorHex = colorHex;
-    }
 
     public int getX() {
         return x;
@@ -51,12 +44,10 @@ public class Bloque {
         return y;
     }
 
-    public String getColor() {
-        return color;
+    public int getTipo() {
+        return tipo;
     }
 
-    public String getColorHex() {
-        return colorHex;
-    }
+    public void setTipo(int tipo){ this.tipo = tipo; }
 
 }

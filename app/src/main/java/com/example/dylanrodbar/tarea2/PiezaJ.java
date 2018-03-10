@@ -9,10 +9,10 @@ public class PiezaJ extends Pieza {
 
     PiezaJ(){
         super();
-        bloque1 = new Bloque("Celeste");
-        bloque2 = new Bloque("Celeste");
-        bloque3 = new Bloque("Celeste");
-        bloque4 = new Bloque("Celeste");
+        bloque1 = new Bloque(2);
+        bloque2 = new Bloque(2);
+        bloque3 = new Bloque(2);
+        bloque4 = new Bloque(2);
         tipoPieza = 2;
     }
     @Override

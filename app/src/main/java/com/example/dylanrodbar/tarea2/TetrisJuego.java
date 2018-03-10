@@ -383,23 +383,67 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
         int columnaBloque4 = piezaActual.getYBloque4();
 
         TableRow r;
-        ImageView im;
+        ImageView im1;
+        ImageView im2;
+        ImageView im3;
+        ImageView im4;
 
         r = (TableRow) tableLa.getChildAt(filaBloque1 + 1);
-        im = (ImageView) r.getChildAt(columnaBloque1 + 1);
-        im.setImageResource(R.drawable.b);
+        im1 = (ImageView) r.getChildAt(columnaBloque1 + 1);
+
 
         r = (TableRow) tableLa.getChildAt(filaBloque2 + 1);
-        im = (ImageView) r.getChildAt(columnaBloque2 + 1);
-        im.setImageResource(R.drawable.b);
+        im2 = (ImageView) r.getChildAt(columnaBloque2 + 1);
 
         r = (TableRow) tableLa.getChildAt(filaBloque3 + 1);
-        im = (ImageView) r.getChildAt(columnaBloque3 + 1);
-        im.setImageResource(R.drawable.b);
+        im3 = (ImageView) r.getChildAt(columnaBloque3 + 1);
 
         r = (TableRow) tableLa.getChildAt(filaBloque4 + 1);
-        im = (ImageView) r.getChildAt(columnaBloque4 + 1);
-        im.setImageResource(R.drawable.b);
+        im4 = (ImageView) r.getChildAt(columnaBloque4 + 1);
+
+        int tipo = piezaActual.getTipoPieza();
+        if(tipo == 1) {
+            im1.setImageResource(R.drawable.piezai);
+            im2.setImageResource(R.drawable.piezai);
+            im3.setImageResource(R.drawable.piezai);
+            im4.setImageResource(R.drawable.piezai);
+        }
+        else if(tipo == 2) {
+            im1.setImageResource(R.drawable.piezaj);
+            im2.setImageResource(R.drawable.piezaj);
+            im3.setImageResource(R.drawable.piezaj);
+            im4.setImageResource(R.drawable.piezaj);
+        }
+        else if(tipo == 3) {
+            im1.setImageResource(R.drawable.piezal);
+            im2.setImageResource(R.drawable.piezal);
+            im3.setImageResource(R.drawable.piezal);
+            im4.setImageResource(R.drawable.piezal);
+        }
+        else if(tipo == 4) {
+            im1.setImageResource(R.drawable.piezao);
+            im2.setImageResource(R.drawable.piezao);
+            im3.setImageResource(R.drawable.piezao);
+            im4.setImageResource(R.drawable.piezao);
+        }
+        else if(tipo == 5) {
+            im1.setImageResource(R.drawable.piezas);
+            im2.setImageResource(R.drawable.piezas);
+            im3.setImageResource(R.drawable.piezas);
+            im4.setImageResource(R.drawable.piezas);
+        }
+        else if(tipo == 6) {
+            im1.setImageResource(R.drawable.piezat);
+            im2.setImageResource(R.drawable.piezat);
+            im3.setImageResource(R.drawable.piezat);
+            im4.setImageResource(R.drawable.piezat);
+        }
+        else if(tipo == 7) {
+            im1.setImageResource(R.drawable.piezaz);
+            im2.setImageResource(R.drawable.piezaz);
+            im3.setImageResource(R.drawable.piezaz);
+            im4.setImageResource(R.drawable.piezaz);
+        }
     }
 
     public void dibujarMatrizLogica() {
@@ -408,7 +452,15 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
                 if(matrizBloques[i][j].getOcupado()) {
                     TableRow r = (TableRow) tableLa.getChildAt(i+1);
                     ImageView im = (ImageView) r.getChildAt(j+1);
-                    im.setImageResource(R.drawable.b);
+                    int tipo = matrizBloques[i][j].getBloque().getTipo();
+                    if(tipo == 1) im.setImageResource(R.drawable.piezai);
+                    if(tipo == 2) im.setImageResource(R.drawable.piezaj);
+                    if(tipo == 3) im.setImageResource(R.drawable.piezal);
+                    if(tipo == 4) im.setImageResource(R.drawable.piezao);
+                    if(tipo == 5) im.setImageResource(R.drawable.piezas);
+                    if(tipo == 6) im.setImageResource(R.drawable.piezat);
+                    if(tipo == 7) im.setImageResource(R.drawable.piezaz);
+
                 }
                 else{
                     TableRow r = (TableRow) tableLa.getChildAt(i+1);

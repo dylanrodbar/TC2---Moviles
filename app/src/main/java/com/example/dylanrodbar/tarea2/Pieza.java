@@ -16,10 +16,10 @@ public abstract class Pieza {
 
 
     Pieza(Bloque bloque1, Bloque bloque2, Bloque bloque3, Bloque bloque4) {
-        this.bloque1 = new Bloque(bloque1.getX(), bloque1.getY(), bloque1.getColor());
-        this.bloque2 = new Bloque(bloque2.getX(), bloque2.getY(), bloque2.getColor());
-        this.bloque3 = new Bloque(bloque3.getX(), bloque3.getY(), bloque3.getColor());
-        this.bloque4 = new Bloque(bloque4.getX(), bloque4.getY(), bloque4.getColor());
+        this.bloque1 = new Bloque(bloque1.getX(), bloque1.getY());
+        this.bloque2 = new Bloque(bloque2.getX(), bloque2.getY());
+        this.bloque3 = new Bloque(bloque3.getX(), bloque3.getY());
+        this.bloque4 = new Bloque(bloque4.getX(), bloque4.getY());
     }
     public Pieza(){
         tipo = 0;
@@ -163,6 +163,8 @@ public abstract class Pieza {
         if(tipo == 0) tipo = 3;
         else tipo--;
     }
+
+    public int getTipo(){return tipo;}
 
 
     public abstract void asignarValoresBloques();

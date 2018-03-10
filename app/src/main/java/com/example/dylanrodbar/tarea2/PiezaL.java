@@ -8,10 +8,10 @@ public class PiezaL extends Pieza {
 
     PiezaL(){
         super();
-        bloque1 = new Bloque("Verde");
-        bloque2 = new Bloque("Verde");
-        bloque3 = new Bloque("Verde");
-        bloque4 = new Bloque("Verde");
+        bloque1 = new Bloque(3);
+        bloque2 = new Bloque(3);
+        bloque3 = new Bloque(3);
+        bloque4 = new Bloque(3);
         tipoPieza = 3;
     }
     @Override
