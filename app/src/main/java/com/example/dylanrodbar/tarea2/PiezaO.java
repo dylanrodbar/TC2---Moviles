@@ -19,8 +19,8 @@ public class PiezaO extends Pieza {
     public void asignarValoresBloques() {
         tipoPiezas[0].annadirPosiciones(0, 4, 0);
         tipoPiezas[0].annadirPosiciones(0, 5, 1);
-        tipoPiezas[0].annadirPosiciones(1, 4, 2);
-        tipoPiezas[0].annadirPosiciones(1, 3, 3);
+        tipoPiezas[0].annadirPosiciones(1, 5, 2);
+        tipoPiezas[0].annadirPosiciones(1, 4, 3);
 
         tipoPiezas[1].annadirPosiciones(0, 5, 0);
         tipoPiezas[1].annadirPosiciones(1, 5, 1);

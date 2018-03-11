@@ -66,7 +66,7 @@
         android:id="@+id/imageButton3"
         android:layout_width="45dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="96dp"
         android:layout_marginStart="8dp"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
@@ -101,5 +101,49 @@
         android:textColor="@android:color/background_light"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTetris1" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAbajo"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:onClick="clickBotonAbajo"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@drawable/botonabajo" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:onClick="clickBotonRotacionIzquierda"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/tableLayoutTetris"
+        app:srcCompat="@drawable/botonrotacionizquierda" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:onClick="clickBotonRotacionDerecha"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonDerecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/botonrotacionderecha" />
 
 </android.support.constraint.ConstraintLayout>

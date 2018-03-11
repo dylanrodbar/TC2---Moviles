@@ -97,7 +97,7 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
 
 
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(700);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -759,6 +759,18 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
 
     }
 
+    public void clickBotonAbajo(View view) {
+        bajarPiezaCompleta();
+    }
+
+    public void clickBotonRotacionDerecha(View view) {
+        cambiarRotacionDerechaPieza();
+    }
+
+    public void clickBotonRotacionIzquierda(View view) {
+        cambiarRotacionIzquierdaPieza();
+    }
+
 
     /*Manejo de gestos*/
 
@@ -768,11 +780,11 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
         float v2 = e.getRawY();
 
         if(v1 > 500){
-            cambiarRotacionDerechaPieza();
+
 
         }
         else{
-            cambiarRotacionIzquierdaPieza();
+
 
         }
 
@@ -785,10 +797,10 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
         float v2 = e.getRawY();
 
         if(v1 > 500){
-            cambiarRotacionIzquierdaPieza();
+
         }
         else{
-            cambiarRotacionDerechaPieza();
+
         }
 
         return false;
@@ -800,10 +812,10 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
         float v2 = e.getRawY();
 
         if(v1 > 500){
-            cambiarRotacionIzquierdaPieza();
+
         }
         else{
-            cambiarRotacionDerechaPieza();
+
         }
 
         return false;
@@ -856,7 +868,7 @@ public class TetrisJuego extends AppCompatActivity implements GestureDetector.On
 
     @Override
     public void onLongPress(MotionEvent e) {
-        bajarPiezaCompleta();
+
 
     }
 
